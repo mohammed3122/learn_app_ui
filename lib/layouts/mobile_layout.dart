@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:learn_app_ui/widgets/list_tile_details.dart';
+import 'package:learn_app_ui/widgets/item_details.dart';
 
 class MobileLayout extends StatelessWidget {
   const MobileLayout({super.key});
