@@ -4,11 +4,11 @@ import 'package:learn_app_ui/layouts/mobile_layout.dart';
 import 'package:learn_app_ui/layouts/tablet_layout.dart';
 
 void main() {
-  runApp(LeanrLayoutBuilder());
+  runApp(LearnLayoutBuilder());
 }
 
-class LeanrLayoutBuilder extends StatelessWidget {
-  const LeanrLayoutBuilder({super.key});
+class LearnLayoutBuilder extends StatelessWidget {
+  const LearnLayoutBuilder({super.key});
 
   @override
   Widget build(BuildContext context) {
