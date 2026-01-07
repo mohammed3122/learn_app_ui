@@ -16,10 +16,10 @@ class LeanrLayoutBuilder extends StatelessWidget {
       home: Scaffold(
         body: LayoutBuilder(
           builder: (context, constranis) {
-            if (constranis.maxWidth <= 370.0) {
+            if (constranis.maxWidth <= 350.0) {
               return MobileLayout();
-            } else if (645.0 > constranis.maxWidth &&
-                constranis.maxWidth >= 370.0) {
+            } else if (350.0 < constranis.maxWidth &&
+                constranis.maxWidth <= 650) {
               return TabletLayout();
             } else {
               return DeskTopLayout();
