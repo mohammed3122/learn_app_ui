@@ -15,11 +15,10 @@ class LearnLayoutBuilder extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: LayoutBuilder(
-          builder: (context, constranis) {
-            if (constranis.maxWidth <= 350.0) {
+          builder: (context, constraints) {
+            if (constraints.maxWidth < 350.0) {
               return MobileLayout();
-            } else if (350.0 < constranis.maxWidth &&
-                constranis.maxWidth <= 650) {
+            } else if (constraints.maxWidth < 650) {
               return TabletLayout();
             } else {
               return DeskTopLayout();
