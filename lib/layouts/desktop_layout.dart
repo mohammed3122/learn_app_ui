@@ -49,7 +49,9 @@ class _DeskTopLayoutState extends State<DeskTopLayout> {
         ),
         Expanded(
           flex: 1,
-          child: Center(child: ListTileDetails(number: detailsNum)),
+          child: Center(
+            child: ListTileDetails(number: detailsNum, isItem: false),
+          ),
         ),
 
         // ListTileDetails(number: ),
