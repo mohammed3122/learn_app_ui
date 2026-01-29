@@ -8,7 +8,6 @@ void main() {
   runApp(LearnLayoutBuilder());
 }
 
-// yuyuy
 class LearnLayoutBuilder extends StatelessWidget {
   const LearnLayoutBuilder({super.key});
 
