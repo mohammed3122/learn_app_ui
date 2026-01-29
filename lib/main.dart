@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:learn_app_ui/helper/adaptive_layout.dart';
 import 'package:learn_app_ui/layouts/desktop_layout.dart';
 import 'package:learn_app_ui/layouts/mobile_layout.dart';
 import 'package:learn_app_ui/layouts/tablet_layout.dart';
@@ -13,18 +14,10 @@ class LearnLayoutBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        body: LayoutBuilder(
-          builder: (context, constraints) {
-            if (constraints.maxWidth < 350.0) {
-              return MobileLayout();
-            } else if (constraints.maxWidth < 650) {
-              return TabletLayout();
-            } else {
-              return DeskTopLayout();
-            }
-          },
-        ),
+      home: AdaptiveLayout(
+        mobileLayout: (BuildContext context) => MobileLayout(),
+        tabletLayout: (BuildContext context) => TabletLayout(),
+        desktopLayout: (BuildContext context) => DeskTopLayout(),
       ),
     );
   }

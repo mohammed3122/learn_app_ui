@@ -1,21 +1,33 @@
 import 'package:flutter/material.dart';
 
 class Item extends StatelessWidget {
-  const Item({super.key, required this.numIndex});
+  const Item({super.key, required this.itemTitle, required this.isDetail});
 
-  final int numIndex;
+  final dynamic itemTitle;
+  final bool isDetail;
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Container(
+    return Container(
+      margin: EdgeInsets.all(10),
+      decoration: BoxDecoration(
         color: Colors.green,
-        height: 20,
-        child: Center(
-          child: Text(
-            numIndex.toString(),
-            style: TextStyle(color: Colors.white, fontSize: 40),
+        borderRadius: BorderRadius.circular(10),
+      ),
+
+      height: 150,
+      width: 150,
+      child: Center(
+        child: Text(
+          textAlign: .center,
+          itemTitle.toString(),
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: isDetail
+                ? itemTitle == 'No Number now'
+                      ? 30
+                      : 100
+                : 100,
           ),
         ),
       ),
